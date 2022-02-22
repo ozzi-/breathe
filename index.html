@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+	<style>
+		body {
+			background: #454a59;
+		}
+
+		.padtop{
+			padding-top: 150px;
+		}
+
+		.middle{
+			position: absolute;
+	  		position: absolute;
+		  	left: 50%;
+		  	top: 50%;
+		  	transform: translateX(-50%) translateY(-50%);
+		}
+
+		.circle { 
+			border-radius: 30px;
+			width: 30px;
+			height: 30px;
+			background-color: blue;
+			-webkit-transition-property: -webkit-transform;
+			-webkit-transition-duration: 10s;
+			-moz-transition-property: -moz-transform background-color;
+			-moz-transition-duration: 10s;
+			-webkit-animation-name: grow;
+			-webkit-animation-duration: 10s;
+			-webkit-animation-iteration-count: infinite;
+			-webkit-animation-timing-function: linear;
+			-moz-animation-name: grow;
+			-moz-animation-duration: 10s;
+			-moz-animation-iteration-count: infinite;
+			-moz-animation-timing-function: linear;
+		}
+
+		h3:before{
+			content: 'Breathe in';
+			-webkit-transition-property: -webkit-transform;
+			-webkit-transition-duration: 10;
+			-moz-transition-property: -moz-transform background-color;
+			-moz-transition-duration: 10s;
+			-webkit-animation-name: instruction;
+			-webkit-animation-duration: 10s;
+			-webkit-animation-iteration-count: infinite;
+			-webkit-animation-timing-function: linear;
+			-moz-animation-name: instruction;
+			-moz-animation-duration: 10s;
+			-moz-animation-iteration-count: infinite;
+			-moz-animation-timing-function: linear;
+		}
+
+		@-webkit-keyframes grow {
+			0%  { transform: scale(1); background-color: blue;}
+			25% { transform: scale(4); background-color: yellow;}
+			50% { transform: scale(4); background-color: yellow;}
+			75% { transform: scale(1); background-color: blue;}
+		}
+
+		@-webkit-keyframes instruction {
+			0%  { content:"Breathe in" }
+			50% { content:"Hold" }
+			53% { content:"Breathe out" }
+			95%  { content:"Hold" }
+		}
+	</style>
+	<div class="middle">
+		<div class="circle"></div>
+	</div>
+	<div class="middle">
+		<div class="padtop">
+			<span class="instruction-color">
+				<h3></h3>
+			</span>
+		</div>
+	</div>
+</html>
